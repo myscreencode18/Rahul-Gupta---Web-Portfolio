@@ -1,4 +1,6 @@
-import { transporter } from "../config/mailer.js";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendContactMail = async (req, res) => {
   try {
@@ -8,21 +10,22 @@ export const sendContactMail = async (req, res) => {
       return res.status(400).json({ message: "All fields required" });
     }
 
-    await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER, // tumhara inbox
+    await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
+      to: ["rahulgupta97668@gmail.com"],
+      replyTo: email,
       subject: `New Contact Message from ${name}`,
       html: `
-        <h3>New Message</h3>
+        <h3>New Message 🚀</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong><br/>${message}</p>
       `,
     });
 
-    res.status(200).json({ message: "Message sent successfully" });
+    return res.status(200).json({ message: "Message sent successfully" });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Email sending failed" });
+    console.error("Resend Error:", error);
+    return res.status(500).json({ message: "Email sending failed" });
   }
 };
