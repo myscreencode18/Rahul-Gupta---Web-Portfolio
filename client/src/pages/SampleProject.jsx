@@ -33,7 +33,7 @@ export const projectsData = [
   ],
 
   result: "Streamlined the reservation process and reduced manual errors.",
-  liveLink: "#",
+  liveLink: "https://petal-plate-restaurant-frontend.onrender.com/",
   codeLink: "https://github.com/myscreencode18/Petal-Plate---Restaurant-",
 }
 ,
@@ -65,7 +65,7 @@ export const projectsData = [
   ],
 
   result: "Created an easy-to-share and elegant wedding experience.",
-  liveLink: "#",
+  liveLink: "https://wedwebjohn-sarah-frontend.onrender.com/",
   codeLink: "https://github.com/myscreencode18/WedWebJohn-Sarah",
 }
 ,
@@ -97,7 +97,7 @@ export const projectsData = [
   ],
 
   result: "Helped present creative and technical work in a clear, professional format.",
-  liveLink: "#",
+  liveLink: "https://devframe-client.onrender.com/",
   codeLink: "https://github.com/myscreencode18/DevFrame",
 }
 ,
@@ -129,8 +129,8 @@ export const projectsData = [
   ],
 
   result: "Enabled better control over travel content presentation.",
-  liveLink: "#",
-  codeLink: "#",
+  liveLink: "https://travelinfluencersitefrontend.onrender.com",
+  codeLink: "https://github.com/myscreencode18/TravelInfluencerSite",
 }
 , 
 
@@ -167,7 +167,7 @@ export const projectsData = [
 
   result:
     "Created a professional platform that clearly communicates fitness programs and membership options.",
-  liveLink: "#",
+  liveLink: "https://sculpt-fitness-client.onrender.com",
   codeLink: "https://github.com/myscreencode18/Sculpt-Fitness",
 }
 
